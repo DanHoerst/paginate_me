@@ -3,19 +3,22 @@ paginate_me
 
 An easy utility I use for pagination in Django.
 
-To implement, move the paginate folder into your Django project.
-In your views you can then import and use paginate_me. The function takes 3 values - the request, the queryset of values you want paginated, and the amount of values you want on each page.
-It returns two values, the iterable listing and the iterable for the pagination.
+Implementation - 
 
-See example - 
+1) Move the paginate folder into your Django project.
+2) Use paginate_me() in your project. 
+
+Example - 
+
+The paginate_me() function takes 3 values - the request, the queryset of values you want paginated, and the amount of values you want on each page.
+It returns two values, the iterable listing and the iterable for the pagination.
 
 views.py:
 
-from paginate_me.paginate import paginate_me
+    from paginate_me.paginate import paginate_me
 
-list_of_values = Lists.objects.filter(user=request.user)
-
-listing, paginator = paginate_me(request, list_of_values, 6)
+    list_of_values = Lists.objects.filter(user=request.user)
+    listing, paginator = paginate_me(request, list_of_values, 6)
 
 
 templates.html:
