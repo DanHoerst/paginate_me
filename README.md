@@ -6,6 +6,7 @@ An easy utility I use for pagination in Django.
 Implementation - 
 
 1) Move the paginate folder into your Django project.
+
 2) Use paginate_me() in your project. 
 
 Example - 
